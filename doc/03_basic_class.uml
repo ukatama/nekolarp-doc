@@ -1,0 +1,52 @@
+@startuml
+package api {
+    class SoundFileController {
+        +create()
+        +index()
+        +show(id: Int)
+        +update(id: Int)
+        +remove(id: Int)
+    }
+
+    class SoundDeviceController {
+        +index()
+        +show(id: Int)
+    }
+
+    class SoundEventController {
+        +create()
+        +index()
+        +show(id: Int)
+        +update(id: Int)
+        +remove(id: Int)
+    }
+}
+
+package models {
+    class SoundFile {
+        +id: integer
+        +title: integer
+        +filename: integer
+        +filetype: string
+        +loop: boolean
+        +cratedAt: timestamp
+        +modifiedAt: timestamp
+    }
+
+    class SoundEvent {
+        +id: integer
+        +soundFileId: integer
+        +soundDeviceId: string
+        +title: integer
+        +cratedAt: timestamp
+        +modifiedAt: timestamp
+    }
+
+    class EventList {
+        +id: integer
+        +title: string
+        +createdAt: timestamp
+        +modifiedAt: timestamp
+    }
+}
+@enduml

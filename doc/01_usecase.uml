@@ -1,0 +1,24 @@
+@startuml
+(BGM・SE再生) as (SOUND)
+GM --> (SOUND)
+(SOUND) <|-- (ファイル登録)
+(SOUND) <|-- (デバイス登録)
+(SOUND) <|-- (サウンドイベント登録)
+(SOUND) <|-- (サウンドイベント再生)
+(SOUND) <|-- (サウンドイベント停止)
+
+(PC制御) as (PC)
+GM --> (PC)
+(PC) <|-- (ダミーサイト登録)
+(PC) <|-- (ダミーサイト表示)
+
+note "WIP" as WIP
+
+(映像投影) as (VIDEO)
+GM --> (VIDEO)
+WIP .. (VIDEO)
+
+(照明制御) as (LIGHT)
+GM --> (LIGHT)
+WIP .. (LIGHT)
+@enduml

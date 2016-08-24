@@ -1,0 +1,27 @@
+{
+  "name": "nekolarp-doc",
+  "version": "1.0.0",
+  "description": "Documentations for NekoLARP",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "build": "plantuml -charset UTF-8 -tpng doc/*.uml",
+    "watch": "nodemon -e uml -w doc -x \"npm run -s build\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukatama/nekolarp-doc.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ukatama/nekolarp-doc/issues"
+  },
+  "homepage": "https://github.com/ukatama/nekolarp-doc#readme",
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
